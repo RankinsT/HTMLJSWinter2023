@@ -11,9 +11,51 @@
     <link type="text/css" rel="stylesheet" href="style.css">
 
     <title>Week 5 | Tables and Forms</title>
+    <h1>Birthday Party Registration Form</h1>
 </head>
 <body>
     <!--Build your Table and Form here-->
-    
+    <table>
+        <thead>
+          <tr>
+            <th style="text-align:left">Labels</th>
+            <th style="text-align:left">Form Fields</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Parent/Guardian Name</td>
+            <td>
+                <input type="text" name="firstname" placeholder="Enter first name" id="firstname" required>
+                <br>
+                <input type="text" name="lastname" placeholder="Enter last name" id="lastname" required>
+            </td>
+          </tr>
+          <tr>
+            <td>Child's First Name</td>
+            <td><input type="text" name="firstname" placeholder="Child's First Name" id="firstname" required></td>
+          </tr>
+          <tr>
+            <td>Child's Age</td>
+            <td><input type="number" name="age" id="age" value="3" required></td>
+          </tr>
+          <tr>
+            <th style="text-align:left">Date and Time</th>
+          </tr>
+          <tr>
+            <td>Date</td>
+            <td><input type="date" name="date" placeholder="mm/dd/yyyy" id="date" required></td>
+          </tr>
+          <tr>
+            <td>Start Time</td>
+            <td><input type="time" name="time" placeholder="--:-- --" id="time" required></td>
+          </tr>
+          <tr>
+            <td>Number of Guests</td>
+            <td><input type="number" name="guests" value="5"></td>
+          </tr>
+        </tbody>
+
+      </table>
 </body>
 </html>
