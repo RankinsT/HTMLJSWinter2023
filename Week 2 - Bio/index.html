@@ -22,6 +22,11 @@
         <a href="#Schooling">Link to Schooling</a>    
         <a href="#Hobbies">Link to Hobbies</a>
         <a href="#footer">Link to Bottom</a>    
+        <style>
+            .hide{
+                display:none;
+            }
+        </style>
         <!--Beginning of the Bio Section-->
             <h2 id="bio"><strong>Bio</strong></h2> <hr> 
                 <p>
@@ -62,18 +67,29 @@
         <a href="#header">Back to Top</a>
     </div>
     <div id="1" class="section">div 1</div>
-    <div id="2" class="section">div 2</div>
-    <div id="3" class="section">div 3</div>
+    <div id="2" class="section hide">div 2</div>
+    <div id="3" class="section hide">div 3</div>
 
     <script>
-        var a = document.querySelectorAll(`a`)
+        var a = Array.from(document.querySelectorAll(`a`))
         var div = document.querySelectorAll(`.section`);
         console.log(a)
-        a[0].addEventListener(`click`, press);
+
+        for(var i=0; i<a.length; i++)
+        {
+            a[i].addEventListener(`click`, press);
+        }
+
 
         function press(e)
         {
             e.preventDefault()
+
+            for(var i=0; i<a.length; i++)
+            {
+                div[i].classList.add(`hide`);
+            }
+            div[a.indexOf(e.target)].classList.remove(`hide`)
         }
     </script>
  
