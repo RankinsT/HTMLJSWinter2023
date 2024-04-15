@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+h1{
+    text-align: center;
+}
+
+h2{
+    border-bottom: 5px solid blue;
+}
+
+div{
+    text-align: center;
+}
+
+a:visited{
+    background-color: purple;
+    transition: all 1s;
+}
+
+a:hover, a:active{
+    color:blue
+}
